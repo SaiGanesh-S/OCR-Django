@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block search %} {% for c in file %}
+<p>{{c}}</p>
+<hr />
+{% endfor %}
+<div class="card">
+  <div class="card-body">
+    <form method="POST">
+      {% csrf_token %}
+      <input
+        type="text"
+        class="form-control"
+        name="keyword"
+        placeholder="Enter Keyword to search"
+      />
+      <hr />
+      <button type="submit" class="btn btn-dark">Search File</button>
+    </form>
+  </div>
+</div>
+
+<p>{% if fileResultfound %} {% for msg in fileResultfound %}</p>
+<div class="alert alert-primary" role="alert">{{msg}}</div>
+
+{% endfor %} {% elif fileResultNotfound %}{% for msg in fileResultNotfound %}
+<div class="alert alert-primary" role="alert">{{msg}}</div>
+{% endfor %} {% endif %} {% endblock search %}

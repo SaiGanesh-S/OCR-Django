@@ -1,0 +1,22 @@
+.header{
+    margin-top: auto;
+    padding-top: 2%;
+    padding-bottom: 0.5%;
+}
+.h2{
+    margin-top: auto;
+    padding-top: 2%;
+    padding-bottom: 0.5%;
+}
+#foot{
+    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-left: 15%;
+    
+
+}
+.blockquote-footer{
+    font-size: 10px;
+}

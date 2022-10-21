@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+     <link rel="stylesheet" href="{% static 'CSS/Style.css' %}">
+    <title>OCR</title>
+   
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    
+  </head>
+  
+
+
+    <body>
+ <div class="container">       
+<figure class="text-center">
+  <blockquote class="blockquote">
+    <h1 class="header"><p>Optical Character Recognition</p></h1>
+  </blockquote>
+  
+</figure>
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+        
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">OCR Home</a>
+       <a class="navbar-brand" href="{% url 'upload' %}">OCR Upload</a>
+      <a class="navbar-brand" href="{% url 'search' %}">OCR Search</a>
+      <a class="navbar-brand" href="{% url 'clearUploads' %}">OCR Clear Previous Data</a>
+    </div>
+   </nav>
+    {% block index %} {% endblock index %}
+  <p>
+    {% block search %} {% endblock search %}
+
+
+</div>
+
+</div>
+  
+</html>

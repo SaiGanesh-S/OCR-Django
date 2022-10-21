@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block index %}
+<p>{% if messages %} {% for msg in messages %}</p>
+<div class="alert alert-primary" role="alert">{{msg}}</div>
+
+{% endfor %} {% endif %}
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %} {{form.as_p}}
+        <hr />
+        <button type="submit" class="btn btn-dark">Upload</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock index %}
